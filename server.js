@@ -42,6 +42,12 @@ app.get('/about', (requst, response) => {
         header: 'About Header',
     });
 });
+app.get('/projects', (req,res)=>{
+    res.render('projects.hbs',{
+        header: 'projects',
+        project: 'some-project'
+    })
+})
 // basic routing
 app.get('/bad', (request, response) => {
     response.send({
@@ -56,3 +62,4 @@ app.listen(port,()=>{
     console.log(`server running on port ${port}`)
 });
 
+// development life cycle from idea to live project
